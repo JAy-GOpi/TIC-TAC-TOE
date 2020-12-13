@@ -28,10 +28,10 @@ int validity(char ar[],int num)                     //asks for user enter and ad
         if (n<1 || n>9){
             printf("invalid selection\n");
             check ='0';
-            getch();
+            //getch();
             continue;
         }
-        if (n==1 || n==2 || n==3 || n==4 || n==5 || n==6 || n==7 || n==8 || n==9 ){
+        if (0<n|| n<10){
             if (turn=='1'){ return ar[n-1]='X'; }
             if (turn=='2'){ return ar[n-1]='O'; }
             check ='1';
@@ -40,7 +40,7 @@ int validity(char ar[],int num)                     //asks for user enter and ad
         else{
             printf("invalid selection\n");
             check ='0';
-            getch();
+            //getch();
             continue;
         }
 
