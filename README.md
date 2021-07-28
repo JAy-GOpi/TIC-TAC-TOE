@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int validity(char ar[],int num)                     //asks for user enter and add X or O in board
+
 {                                                   //checks if entered character is valid or invalid
     char check='0';                                 //and updates table in X or O if character is valid
     char turn;
@@ -47,7 +48,8 @@ int validity(char ar[],int num)                     //asks for user enter and ad
         }while(check!='1');
 
 };
-void board(char ar[]){                                  //draws board
+void board(char ar[])
+{                                  //draws board
 
     system("cls");
     printf("---Tic Tac Toe---\n\n");
@@ -67,7 +69,8 @@ void board(char ar[]){                                  //draws board
 
 };
 
-int result(char ar[]){                                  //checks if win or draw
+int result(char ar[])
+{                                  //checks if win or draw
 
     if(ar[0]==ar[1] && ar[0]==ar[2] && ar[0]=='O'){return 2;}  //row match for 'O'
     if(ar[3]==ar[4] && ar[3]==ar[5] && ar[3]=='O'){return 2;}
