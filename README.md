@@ -1,13 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h>
 
-int validity(char ar[],int num)                     //asks for user enter and add X or O in board
+    int validity(char ar[],int num)                     //asks for user enter and add X or O in board
 
-{                                                   //checks if entered character is valid or invalid
-    char check='0';                                 //and updates table in X or O if character is valid
-    char turn;
-    int n;
-    char c;
+    {                                                   //checks if entered character is valid or invalid
+        char check='0';                                 //and updates table in X or O if character is valid
+        char turn;
+        int n;
+        char c;
 
         if (num%2==0)   {turn='1';}
         else            {turn='2';}
@@ -47,9 +47,9 @@ int validity(char ar[],int num)                     //asks for user enter and ad
 
         }while(check!='1');
 
-};
-void board(char ar[])
-{                                  //draws board
+    };
+    void board(char ar[])
+    {                                  //draws board
 
     system("cls");
     printf("---Tic Tac Toe---\n\n");
@@ -67,10 +67,10 @@ void board(char ar[])
 
 
 
-};
+    };
 
-int result(char ar[])
-{                                  //checks if win or draw
+    int result(char ar[])
+    {                                  //checks if win or draw
 
     if(ar[0]==ar[1] && ar[0]==ar[2] && ar[0]=='O'){return 2;}  //row match for 'O'
     if(ar[3]==ar[4] && ar[3]==ar[5] && ar[3]=='O'){return 2;}
@@ -110,10 +110,10 @@ int result(char ar[])
     else return 0;
 
 
-};
+    };
 
-void main()                                                 //our main
-{
+    void main()                                                 //our main
+    {
 
     char ar[9]={'1','2','3','4','5','6','7','8','9'};
     int num=0;
@@ -133,4 +133,4 @@ void main()                                                 //our main
     if(result(ar)==2){printf("player 2 wins\n");}
     if(result(ar)==0){printf("game draw\n");}
 
-}
+    }
